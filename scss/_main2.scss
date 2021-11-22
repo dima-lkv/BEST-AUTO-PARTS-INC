@@ -1,0 +1,118 @@
+body {
+	align-items: center;
+	background: $top;
+	display: flex;
+	height: 100vh;
+	justify-content: center;
+}
+
+@mixin white-gradient {
+	background: linear-gradient(to right,  $grad1 0%,$grad0 100%);
+}
+
+$animationSpeed: 40s;
+
+// Animation
+@keyframes scroll {
+	0% { transform: translateX(0); }
+	100% { transform: translateX(calc(-100vw * 5))}
+}
+
+
+// Styling
+.slider {
+	background: $top;
+	box-shadow: 0 10px 20px -5px rgba(0, 0, 0, .125);
+	height: 100vh;
+	margin: auto;
+	overflow:hidden;
+	position: relative;
+	width: 100vw;
+
+	&::before,
+	&::after {
+		@include white-gradient;
+		content: "";
+		height: 100vh;
+		position: absolute;
+		width: 50px;
+		z-index: 2;
+	}
+
+	&::after {
+		right: 0;
+		top: 0;
+		transform: rotateZ(180deg);
+	}
+
+	&::before {
+		left: 0;
+		top: 0;
+	}
+
+	.slide-track {
+		animation: scroll $animationSpeed linear infinite;
+		display: flex;
+		width: calc(2700px * 6);
+	}
+
+	.slide {
+		margin-right: 20px;
+		height: 100vh;
+		width: 100vw;
+	}
+}
+
+.wrapper{
+	height: 100vh;
+	width: 100vw;
+	display: flex;
+	background: $top;
+}
+.container-absolute{
+	min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    width: 100vw;
+	background: none;
+	position: absolute;
+	height: 100vh;
+}
+.box{
+	width: 40vw;
+	height: 100vh;
+	margin: 0 auto;
+	justify-content: center;
+	flex-direction: column;
+	text-align: center;
+	display: flex;
+	background: rgba(24, 26, 37, 0.5);
+	.box__title{
+		color: $text;
+		font-size: 60px;
+		font-weight: 1;
+	}
+	.box__subtitle{
+		font-size: 45px;
+	}
+}
+
+.mod1{
+	color: gold;
+	font-weight: 800;
+}
+.mod2{
+	color: $text;
+	font-size: 50px;
+	font-weight: 600;
+}
+.mod3{
+	color: $top;
+	font-weight: 600;
+}
+.text{
+	margin: 0 auto;
+	width: 900px;
+	background: rgba(0, 255, 92, 0.8);
+	border-radius: 80px;
+}
