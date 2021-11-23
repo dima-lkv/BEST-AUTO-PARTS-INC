@@ -1,3 +1,107 @@
+@media (min-width: 1200px) {
+  .slider img {
+    height: 100%;
+    width: 100%;
+  }
+
+  .box {
+    width: 40%;
+  }
+
+  .box__title {
+    font-size: 1.8vw;
+  }
+
+  .mod1 {
+    font-size: 1.3vw;
+  }
+
+  .mod2 {
+    font-size: 1vw;
+  }
+
+  .mod3 {
+    font-size: 1.2vw;
+  }
+}
+@media (max-width: 1200px) {
+  .slider img {
+    height: 100%;
+    width: 100%;
+  }
+
+  .box {
+    width: 40%;
+  }
+
+  .box__title {
+    font-size: 3vw;
+  }
+
+  .mod1 {
+    font-size: 2.2vw;
+  }
+
+  .mod2 {
+    font-size: 1.5vw;
+  }
+
+  .mod3 {
+    font-size: 1.7vw;
+  }
+}
+@media (max-width: 992px) {
+  .slider img {
+    height: 100%;
+    width: 150%;
+  }
+
+  .box {
+    width: 60%;
+  }
+
+  .box__title {
+    font-size: 4vw;
+  }
+
+  .mod1 {
+    font-size: 3vw;
+  }
+
+  .mod2 {
+    font-size: 2.2vw;
+  }
+
+  .mod3 {
+    font-size: 3vw;
+  }
+}
+@media (max-width: 767px) {
+  .slider img {
+    height: 100%;
+    width: 250%;
+  }
+
+  .box {
+    width: 100%;
+  }
+
+  .box__title {
+    font-size: 8vw;
+  }
+
+  .mod1 {
+    font-size: 6vw;
+  }
+
+  .mod2 {
+    font-size: 5.2vw;
+  }
+
+  .mod3 {
+    font-size: 6vw;
+  }
+}
 body {
   align-items: center;
   background: #181a25;
@@ -21,14 +125,14 @@ body {
   margin: auto;
   overflow: hidden;
   position: relative;
-  width: 100vw;
+  width: 100%;
 }
 .slider::before, .slider::after {
   background: linear-gradient(to right, #181a25 0%, rgba(24, 26, 37, 0) 100%);
   content: "";
   height: 100vh;
   position: absolute;
-  width: 50px;
+  width: 2%;
   z-index: 2;
 }
 .slider::after {
@@ -41,13 +145,13 @@ body {
   top: 0;
 }
 .slider .slide-track {
-  animation: scroll 40s linear infinite;
+  animation: scroll 60s linear infinite;
   display: flex;
-  width: 16200px;
+  width: 500vw;
 }
 .slider .slide {
-  height: 100vh;
-  width: 100vw;
+  height: 110vh;
+  width: 2900px;
 }
 
 .wrapper {
@@ -61,7 +165,7 @@ body {
   min-height: 100vh;
   display: flex;
   flex-direction: column;
-  width: 100vw;
+  width: 100%;
   background: none;
   position: absolute;
   height: 100vh;
@@ -69,8 +173,8 @@ body {
 
 .box {
   overflow: scroll;
-  width: 40%;
-  height: 100%;
+  max-width: 2000px;
+  height: 100vh;
   margin: 0 auto;
   justify-content: center;
   flex-direction: column;
@@ -79,33 +183,31 @@ body {
   background: rgba(24, 26, 37, 0.5);
 }
 .box .box__title {
+  padding-top: 50px;
   height: fit-content;
   margin: 50px 0 0 0;
   color: white;
-  font-size: 200%;
-  font-weight: 1;
+  font-weight: lighter;
 }
 .box .box__subtitle {
   height: fit-content;
-  font-size: 20px;
   text-align: center;
 }
 
 .mod1 {
   color: gold;
-  font-weight: 800;
+  font-weight: bold;
 }
 
 .mod2 {
   color: white;
-  font-size: 50px;
-  font-weight: 600;
+  font-weight: normal;
 }
 
 .mod3 {
   text-align: center;
   color: #181a25;
-  font-weight: 600;
+  font-weight: bolder;
   background: rgba(0, 255, 92, 0.8);
   border-radius: 80px;
 }
