@@ -11,7 +11,7 @@ body {
     transform: translateX(0);
   }
   100% {
-    transform: translateX(-500vw);
+    transform: translateX(-400vw);
   }
 }
 .slider {
@@ -46,7 +46,6 @@ body {
   width: 16200px;
 }
 .slider .slide {
-  margin-right: 20px;
   height: 100vh;
   width: 100vw;
 }
@@ -69,8 +68,9 @@ body {
 }
 
 .box {
-  width: 40vw;
-  height: 100vh;
+  overflow: scroll;
+  width: 40%;
+  height: 100%;
   margin: 0 auto;
   justify-content: center;
   flex-direction: column;
@@ -79,12 +79,16 @@ body {
   background: rgba(24, 26, 37, 0.5);
 }
 .box .box__title {
+  height: fit-content;
+  margin: 50px 0 0 0;
   color: white;
-  font-size: 60px;
+  font-size: 200%;
   font-weight: 1;
 }
 .box .box__subtitle {
-  font-size: 45px;
+  height: fit-content;
+  font-size: 20px;
+  text-align: center;
 }
 
 .mod1 {
@@ -99,13 +103,9 @@ body {
 }
 
 .mod3 {
+  text-align: center;
   color: #181a25;
   font-weight: 600;
-}
-
-.text {
-  margin: 0 auto;
-  width: 900px;
   background: rgba(0, 255, 92, 0.8);
   border-radius: 80px;
 }
